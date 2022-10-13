@@ -83,12 +83,12 @@ export default function ListMember() {
                 </button>
               </td>
               <td> <button
-                  onClick={() => {
-                    deleteHandler(item);
-                  }}
-                >
-                  X
-                </button></td>
+                onClick={() => {
+                  deleteHandler(item);
+                }}
+              >
+                X
+              </button></td>
             </tr>
           })}
         </tbody>

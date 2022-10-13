@@ -20,6 +20,7 @@ function CreateMember() {
     axios.post('http://localhost:4042/createMember', memberInfo)
       .then(res => console.log(res.data));
     setMemberInfo({ name: '', email: '', phone: '', country: '' });
+    window.location.reload(false);
   };
 
   return (
