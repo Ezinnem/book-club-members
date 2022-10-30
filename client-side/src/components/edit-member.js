@@ -25,15 +25,15 @@ export default function EditMember(props) {
 
   if (props) {
     return (
-      <div>
-        <p>Edit Member Details for {memberInfo.name}</p>
+      <div className="edit-form-container">
+        <p className="edit-detail-text">Edit Member Details for {memberInfo.name}</p>
 
-        <Form onSubmit={handleEditForm}>
+        <Form onSubmit={handleEditForm} className="edit-form">
           <input type="text" name="name" value={memberInfo.name} onChange={handleChange} />
           <input type="text" name="email" value={memberInfo.email} onChange={handleChange} />
           <input type="text" name="phone" value={memberInfo.phone} onChange={handleChange} />
           <input type="text" name="country" value={memberInfo.country} onChange={handleChange} />
-          <Button type="submit">Submit Changes</Button>
+          <Button type="submit" className="submit-edit-button">Submit Changes</Button>
         </Form>
       </div>
     );

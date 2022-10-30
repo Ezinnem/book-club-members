@@ -24,9 +24,9 @@ function CreateMember() {
   };
 
   return (
-    <div>
-      <h1> Register a member</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='container'>
+      <h1> Register A Member</h1>
+      <form onSubmit={handleSubmit} className="create-form">
         <input
           value={memberInfo.name}
           name="name"
@@ -63,7 +63,7 @@ function CreateMember() {
         />
         <br />
 
-        <input type='submit' value='Create a member' />
+        <button className="submit-button" type='submit'>Create A Member </button>
 
       </form>
     </div>

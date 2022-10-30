@@ -44,9 +44,9 @@ export default function ListMember() {
 
   if (data) {
     return <div>
-      <Modal show={showModal} onHide={handleCloseModal}>
+      <Modal show={showModal} onHide={handleCloseModal} className="edit-modal">
         <EditMember details={memberId} />
-        <Button onClick={handleCloseModal}> Close</Button>
+        <Button onClick={handleCloseModal} className="close-modal"> Close</Button>
       </Modal>
 
 
@@ -74,7 +74,7 @@ export default function ListMember() {
               <td>{item.phone}</td>
               <td>{item.country}</td>
               <td>
-                <button
+                <button className="edit-member"
                   onClick={() => {
                     editHandler(item);
                   }}
@@ -82,7 +82,7 @@ export default function ListMember() {
                   Edit
                 </button>
               </td>
-              <td> <button
+              <td> <button className="delete-member"
                 onClick={() => {
                   deleteHandler(item);
                 }}
